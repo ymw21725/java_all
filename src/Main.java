@@ -1,4 +1,4 @@
-public class Main {
+public class Main {	// 선택정렬
 	public static void main(String[] args) { 
 		int[] ar = {50,70,40,60,80};
 		
