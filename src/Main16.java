@@ -2,20 +2,23 @@ import java.util.Scanner;
 
 public class Main16{
    public static int validateSum(int min, int max,int tot) {
-	   
-	   if(min>max) {
-		   
-		   System.out.println();
-		   return tot;
-	   }
-	   
-	   System.out.printf(" %d "  , min);
-	   if(min<max) {
-		   System.out.print("+");
-	   }
-	   tot += min;
-	   
-	   return validateSum(min+1,max,tot);
+	   if(min>max) return tot;
+	   System.out.printf("%d %s ",min,min == max ? "\n" : "+" );
+	   tot+=min;
+	   return validateSum(min+1, max, tot);
+//	   if(min>max) {
+//		   
+//		   System.out.println();
+//		   return tot;
+//	   }
+//	   
+//	   System.out.printf(" %d "  , min);
+//	   if(min<max) {
+//		   System.out.print("+");
+//	   }
+//	   tot += min;
+//	   
+//	   return validateSum(min+1,max,tot);
    }
    
    public static void main(String[] args) {
