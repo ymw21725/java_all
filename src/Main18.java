@@ -4,15 +4,13 @@ public class Main18{
    public static int validateSum(int t, int min,int max) {
 	   
 	  if(min>max) return t;
-	   
-	  validateSum(t, min+1, max);
+
+	  t = validateSum(t, min+1, max);
+	  
+	  System.out.printf("%d%s",min,min>max ? " \n " : " + ");
 	  t+=min;
-	 
-	  System.out.printf("%d%s",min,min==max ? " \n " : " + ");
-	  
-	  return t;
-	  
-	  
+
+	  return t;  
    }
    
    public static void main(String[] args) {
