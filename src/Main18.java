@@ -5,10 +5,10 @@ public class Main18{
 	   
 	  if(min>max) return t;
 
-	  t = validateSum(t, min+1, max);
+	  t = validateSum(t, min, max-1);
 	  
-	  System.out.printf("%d%s",min,min>max ? " \n " : " + ");
-	  t+=min;
+	  System.out.printf("%d%s",max,min<max ? " \n " : " + ");
+	  t+=max;
 
 	  return t;  
    }
