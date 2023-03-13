@@ -12,7 +12,7 @@ public class Main20 {	// 모든 로직은 메인 메서드에서 , 이분검색�
 				return mid;
 			} else if(Key < selectionSort[mid]) {
 				return binary(Lx,mid-1,Key,selectionSort);
-			} else if(Key > selectionSort[mid]){
+			} else {
 				return binary(mid+1,Hx,Key,selectionSort);
 			}
 		}
