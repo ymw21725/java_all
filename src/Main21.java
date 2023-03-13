@@ -5,8 +5,8 @@ class DataBox {
 	
 	void initData(int n, double d , String str) {
 		this.n = n;	// this는 객체 자신을 가르킴 여기서 this.n은 2,3,4번째줄 n,d,str을 가르킴.
-		this.d = d;
-		this.str = str;
+		this.d = d;	// 그 후 this.n에 n을 대입하여 출력하므로.
+		this.str = str; // 생성자의 매개변수 이름과 인스턴스 변수의 이름이 같을 경우에는 인스턴스 변수 앞에 this 키워드를 붙여 구분해만 합니다.
 	}
 	
 	void outputData() {	// 동등관계이므로 매개변수 없어도됨.
