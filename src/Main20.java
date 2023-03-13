@@ -2,21 +2,15 @@ import java.util.Scanner; // 이분검색 예제
 
 public class Main20 {	// 모든 로직은 메인 메서드에서 , 이분검색만 별도의 메서드로 재귀검색.(인덱스만 반환하기.)
 
-	public static int binary(int Lx, int Hx, int Key, int[] selectionSort) {
-		int mid;
+	 static int binary(int Lx, int Hx, int Key, int[] selectionSort) {
+		if(Lx>Hx) return -1;
+		int mid=(Lx + Hx) / 2;
+
+		if(Key == selectionSort[mid]) return mid;
+		else if(Key < selectionSort[mid]) Hx = mid-1;
+		else Lx = mid+1;
 		
-		if(Lx <= Hx ) {
-			mid = (Lx + Hx) / 2;
-			
-			if(Key == selectionSort[mid]) {
-				return mid;
-			} else if(Key < selectionSort[mid]) {
-				return binary(Lx,mid-1,Key,selectionSort);
-			} else {
-				return binary(mid+1,Hx,Key,selectionSort);
-			}
-		}
-		return -1;
+		return binary(Lx,Hx,Key,selectionSort);
 	}
 
 	public static void main(String[] args) {
@@ -33,20 +27,18 @@ public class Main20 {	// 모든 로직은 메인 메서드에서 , 이분검색�
 			}
 		}
 		
-		int Lx = 0;
-		int Hx = selectionSort.length-1;
 		int num;
 		
 		System.out.print("검색 값 입력 :");
 		num = sc.nextInt();
 
 		System.out.println();
-		int a = binary(Lx,Hx,num,selectionSort)+1;
+		int a = binary(0,selectionSort.length-1,num,selectionSort);
 		sc.close();
-		if(a == 0) {
+		if(a == -1) {
 			System.out.println("찾으려는 값이 존재하지 않습니다.");
 		} else {
-			System.out.printf("검색 값 %d는(은) selectionSort배열 %d번째 위치에 존재합니다. ",num,a);
+			System.out.printf("검색 값 %d는(은) selectionSort배열 %d번째 위치에 존재합니다. ",selectionSort[a],a+1);
 		}
 	}
 
