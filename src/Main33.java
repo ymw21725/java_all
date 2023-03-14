@@ -3,27 +3,27 @@ class Tank3 {	// 탱크 예제 private, 생성자 사용하여 하기..?
    private int cannon;
    private boolean missile;
    
-   Tank3(String tankName, int cannon) {
+   public Tank3(String tankName, int cannon) {
 	   this.tankName = tankName;
 	   this.cannon = cannon;   
    }
    
-   Tank3(String tankName, int cannon, boolean missile) {
+   public Tank3(String tankName, int cannon, boolean missile) {
 	   this(tankName, cannon);
 	   this.missile = missile;   
    }
    
-   void infoTank() {
+   public void infoTank() {
          System.out.printf("탱크명 : %s, ", tankName);
          System.out.printf("포종류 : %d단계, ", cannon);
          System.out.printf("미사일 %s장착\n", missile ? "" : "미");
    }
    
-   void printTankName() {
+   private void printTankName() {
 	   System.out.printf("\n\n< %s 공격 >\n", tankName); 
    }
    
-   void attackCannon() {
+   private void attackCannon() {
 	   String boom = null;
 	   		switch (cannon) {
 	         case 1:
@@ -39,12 +39,12 @@ class Tank3 {	// 탱크 예제 private, 생성자 사용하여 하기..?
 	         System.out.printf("대포발사 : %s\n", boom);   
    }
 
-   void missileAttack() {
+   private void missileAttack() {
 	  
 		   System.out.println("미사일 발사 : 초전박살");
    }
 
-   void attack() {
+   public void attack() {
 	   if(missile) {
 		   
 	   printTankName();
@@ -53,12 +53,12 @@ class Tank3 {	// 탱크 예제 private, 생성자 사용하여 하기..?
 	   }
    }
    
-   void fireCannon() {
+   public void fireCannon() {
 	   printTankName();
 	   attackCannon();
    }
    
-   void fireMissile() {
+   public void fireMissile() {
 	   if(missile) {
 		   printTankName();
 		   missileAttack(); 
