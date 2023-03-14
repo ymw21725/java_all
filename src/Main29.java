@@ -13,7 +13,7 @@ class Car6{
 					// 초기화 위임형식으로 실행. !!
 		this.color = color;
 		this.gasoline = gasoline;
-//		this(name);
+//		this(name);	// this생성자 호출구문 this(name)은 다른 필드 초기식보다 항상 맨 먼저 나와야한다. 그렇지 않으면 컴파일 에러.
 	}
 	
 }
