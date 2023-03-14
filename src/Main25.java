@@ -19,43 +19,51 @@ class Tank2 {	// 미사일 대포 구분해서 하기. 누가 쏘는지에 따�
       }
    }
    
-   void all_attack() {
-	   attack();
-	   missileAttack();
+   void printTankName() {
+	   System.out.printf("\n\n< %s 공격 >\n", tankName); 
+   }
+   
+   void attackCannon() {
+	   String boom = null;
+	   		switch (cannon) {
+	         case 1:
+	            boom = "펑";
+	            break;
+	         case 2:
+	            boom = "펑펑";
+	            break;
+	         case 3:
+	            boom = "콰쾅";
+	            break;
+	         }
+	         System.out.printf("대포발사 : %s\n", boom);   
    }
 
+   void missileAttack() {
+	   if(missile) {
+		   System.out.println("미사일 발사 : 초전박살");
+	   } 
+   }
 
    void attack() {
-      if (initChk) {
-         String boom = null;
-
-         System.out.printf("\n\n< %s 공격 >\n", tankName);
-         switch (cannon) {
-         case 1:
-            boom = "펑";
-            break;
-         case 2:
-            boom = "펑펑";
-            break;
-         case 3:
-            boom = "콰쾅";
-            break;
-         }
-         System.out.printf("대포발사 : %s\n", boom);
-         
-         
+      if(initChk) {
+    	  printTankName();
+    	  attackCannon();
+    	  missileAttack();
       }
    }
    
-   
-   void missileAttack() {
+   void fireCannon() {
 	   if(initChk) {
-		   System.out.printf("\n\n< %s 공격 >\n", tankName);
-		   if(missile) {
-			   System.out.println("미사일 발사 : 초전박살");
-		   } else {
-			   System.out.println("미사일이 장착되지 않았습니다.");
-		   }
+		   printTankName();
+		   attackCannon();
+	   }
+   }
+   
+   void fireMissile() {
+	   if(initChk) {
+		   printTankName();
+		   missileAttack();
 	   }
    }
 }
@@ -82,6 +90,7 @@ public class Main25 {
 //      k2.missileAttack();
 //      k3.missileAttack();
       k3.attack();
-      k3.all_attack();
+      k3.fireCannon();
+      k3.fireMissile();
    }
 }
