@@ -40,14 +40,17 @@ class Tank3 {	// 탱크 예제 private, 생성자 사용하여 하기..?
    }
 
    void missileAttack() {
-	   if(missile)
+	  
 		   System.out.println("미사일 발사 : 초전박살");
    }
 
    void attack() {
+	   if(missile) {
+		   
 	   printTankName();
 	   attackCannon();
 	   missileAttack();
+	   }
    }
    
    void fireCannon() {
