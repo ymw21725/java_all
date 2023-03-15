@@ -3,15 +3,15 @@ enum Tank10 {
 
 	public String tankName;
 	private final String TankTier; // 레벨(1단계)
-	int ngd; // 내구도
-	int cannonLevel;
+	final int ngd; // 내구도
+	final int cannonLevel;
 	public boolean missile;
 	public boolean hackMissile;
 
-	Tank10(String tankName, String TankTier) {
-		this.tankName = tankName;
-		this.TankTier = TankTier;
-	}
+//	Tank10(String tankName, String TankTier) {
+//		this.tankName = tankName;
+//		this.TankTier = TankTier;
+//	}
 
 	Tank10(String TankTier, int ngd, int cannonLevel) {
 		this.TankTier = TankTier;
