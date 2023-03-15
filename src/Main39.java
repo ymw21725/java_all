@@ -20,10 +20,12 @@ public class Main39 {
 		System.out.println();
 		
 //		int i = Star.PROTOSS;	//열거형은 참조형이므로 호환 불가능하다. 따라서 캐스팅 불가.
-//		species = 3;			// 캐스팅 (모든 연산을 진행할 때 같은 타입의 피연산자끼리만 수행 가능한 것.)
+//		species = 3;			// 캐스팅 (모든 연산을 진행할 때 같은 타입의 피연산자끼리만 수행 가능한 것.), 형변환이라고도 함.
 		
 		System.out.println(Star.values()[0]);	// values()는 내장되어있는 기본 메서드로 열거형에 정의된 열거상수들을 
 		System.out.println();					// 차례대로 배열 형태로 리턴. 
+												// 예를 들어 위에서 값이 3개이므로 인덱스는 0,1,2인데 3을 입력 시 	
+												// 바운드를 벗어나므로 컴파일 에러 뜸.
 												// 해당 출력값은 Star라는 열거형에서 첫번째 값인 TERRAN값 출력.
 		
 		for(int i=0; i < Star.values().length;i++ ) {
