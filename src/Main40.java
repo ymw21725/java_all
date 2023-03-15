@@ -29,7 +29,7 @@ public class Main40 {
 		Star1 species = Star1.ZERG;	// 저그 
 		
 		System.out.println(species.getSpeciesName());	// 저그 출력.
-//		System.out.println(Star.getSpeciesName());
-	}
+//		System.out.println(Star.getSpeciesName());	// 열거형 내 선언된 메서드는 열거형에 소속된 메서드가 아닌, 열거형의 
+	}												// 정적객체화된 열거상수 소속이므로 열거상수를 통해서만 호출 가능함에 유의.
 
 }
