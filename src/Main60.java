@@ -48,7 +48,7 @@ public class Main60 {
 		if(car instanceof Truck60) {	// 대상객체(car)가 해당클래스타입(Truck60)이 맞다면 true 아니면 false
 			((Truck60) car).convey();	// 자동완성에서 캐스팅됨.
 		}								// 캐스팅 되면서 truck60에 있는 convey가 실행.
-		
+										// convey는 오버라이딩 된 부분이라 캐스팅 해줘야함.
 		System.out.println();				
 	}										
 	
