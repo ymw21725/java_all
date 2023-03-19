@@ -44,7 +44,7 @@ public class Main61{
       System.out.println(pride.name.model);      
 //      System.out.println(Car.name.model);    // name은 Car객체에 소속된  CarName정적클래스 타입의 비정적 멤버변수일뿐-
                                     // 이므로 Car클래스를 통해서 접근해야 하는 정적 멤버와 혼돈해서는 안됨. 즉,-
-                                    // name은 비정적 멤버임을 구분.
+                                    // name은 비정적 멤버임을 구분. 
       
       Car61.CarName grandeur=new Car61.CarName("그랜다이져",2009);   // 정적이너클래스는 주 클래스에 종속 되어 있는 하나의 -
                                                 // 타입이자 독립적인 클래스임에 유의.
