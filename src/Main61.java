@@ -37,7 +37,7 @@ class Car61{	// 정적 이너 클래스 교본 17페이지 참조.
 }
 
 public class Main61{	
-   public static void Main(String[] args)   {      
+   public static void main(String[] args)   {      
       Car61 pride=new Car61("프라이드",2005,"파랑");
       
       pride.outInfo();
