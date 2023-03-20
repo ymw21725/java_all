@@ -12,7 +12,7 @@ class Car61{	// 정적 이너 클래스 교본 17페이지 참조.
       color=aColor;
    }
    
-   static class CarName{      // CarName은  Car클래스에  소속된  독립적인  정적클래스로써  객체로 부터가  아닌  Car클래스로부터 생성이    
+   static class CarName{     // CarName은  Car클래스에  소속된  독립적인  정적클래스로써  객체로 부터가  아닌  Car클래스로부터 생성이    
       String model;         // -가능한  클래스 타입 멤버일 뿐,  멤버변수가 아님에 유의. 따라서  CarName은  Car클래스 선언 시점부터
       int year;            // -사용 가능할 타입일 뿐  객체 생성과는 무관한  Car클래스에 소속된  독립적인 클래스 타입.  CarName이 -
                         // 공유하는  정보는 클래스(타입)이지 실제 기억 공간이 아니며  CarName 타입이 정적멤버이지  name은  정적
