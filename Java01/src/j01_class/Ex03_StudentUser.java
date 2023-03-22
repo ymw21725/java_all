@@ -8,7 +8,7 @@ public class Ex03_StudentUser   {
 							  new Ex03_Student("양민우","010-7310-7050",32,"인포3",30,10),
 							  new Ex03_Student("양민우","010-7310-7050",32,"인포4",60,70),
 							  new Ex03_Student("양민우","010-7310-7050",32,"인포5",50,20)};
-		Ex03_Student[] ar1 = new Ex03_Student[5];
+		Ex03_Student[] ar1 = new Ex03_Student[1];
 		
 		
 			for(int i = 0; i < ar.length;i++) {

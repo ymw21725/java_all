@@ -28,7 +28,7 @@ public class Ex03_Student extends Ex02_Person {
 
 	@Override
 	public String toString() {	// return super.tostring()방식으로. 
-		return  "Person [name=" + getName() + ", phone=" + getPhone() + ", age=" + getAge() + "]\nStudent [info="+ info + ", java=" + java + ", html=" + html + ", sum=" + sum + "]";
+		return  super.toString() + "\nStudent [info="+ info + ", java=" + java + ", html=" + html + ", sum=" + sum + "]";
 	}
 	
 	

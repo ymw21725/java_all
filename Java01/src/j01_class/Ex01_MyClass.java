@@ -1,3 +1,7 @@
+// 1. 상속(is의 관계) 자손이 조상이 될 수 있다. Ex) Ex02_Person pp = new Ex03_Student();
+// 2. 인스턴스(has의 관계)	Ex) Car car = new Car(), pp.car.set~ , 
+// 3. 매개변수전달하는방법(use 관계)
+
 package j01_class;
 
 public class Ex01_MyClass {
